@@ -56,11 +56,10 @@ def tampilkan_sub_menu():
     print("\n--- TAMPILKAN DATA ---")
     print("1. Tampilkan Semua Data")
     print("2. Tampilkan Nama Siswa")
-    print("3. Tampilkan Nilai Siswa")
-    print("4. Tampilkan Nilai Terbesar Siswa ")
-    print("5. Tampilkan Nilai Terkecil Siswa")
-    print("6. Cari Siswa")
-    print("7. Kembali")
+    print("3. Tampilkan Nilai Terbesar Siswa ")
+    print("4. Tampilkan Nilai Terkecil Siswa")
+    print("5. Cari Siswa")
+    print("6. Kembali")
 
 def tambah_data():
     print("\n--- Tambah Data Siswa ---")
@@ -125,16 +124,6 @@ def tampilkan_nama():
     for siswa in data_siswa:
         print(f"{siswa['id']}. {siswa['nama']}")
 
-def tampilkan_nilai():
-    if not data_siswa:
-        print("\nBelum ada data siswa.")
-        return
-    
-    print("\n--- Nama Siswa ---")
-    for siswa in data_siswa:
-        print(f"{siswa['id']}. NIlai: {siswa['nilai']} - grade: {siswa['grade']}")
-
-
 def nilai_terbesar():
     if not data_siswa:
         print("Tidak ada data.")
@@ -189,7 +178,7 @@ def cari_siswa():
 def secondary():
     while True:
         tampilkan_sub_menu()
-        pilihan = input("Pilih menu (1-7): ")
+        pilihan = input("Pilih menu (1-6): ")
         
         if pilihan == '1':
             tampilkan_semua()
@@ -198,18 +187,15 @@ def secondary():
             tampilkan_nama()
             break
         elif pilihan == '3':
-            tampilkan_nilai()
-            break
-        elif pilihan == '4':
             nilai_terbesar()
             break
-        elif pilihan == '5':
+        elif pilihan == '4':
             nilai_terkecil()
             break
-        elif pilihan == '6':
+        elif pilihan == '5':
             cari_siswa()
             break
-        elif pilihan == '7':
+        elif pilihan == '6':
             break
         else:
             print("Pilihan tidak valid!")

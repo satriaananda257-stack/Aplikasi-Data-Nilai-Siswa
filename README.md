@@ -10,7 +10,6 @@ Program sederhana berbasis Python untuk mengelola data nilai siswa menggunakan t
 - Menghapus data siswa
 - Menampilkan seluruh data siswa
 - Menampilkan nama siswa
-- Menampilkan nilai siswa
 - Menampilkan nilai terbesar siswa
 - Menampilkan nilai terkecil siswa
 - Mencari siswa berdasarkan nama
@@ -59,11 +58,10 @@ Setiap data siswa disimpan dalam bentuk dictionary:
 --- TAMPILKAN DATA ---
 1. Tampilkan Semua Data
 2. Tampilkan Nama Siswa
-3. Tampilkan Nilai Siswa
-4. Tampilkan Nilai Terbesar Siswa
-5. Tampilkan Nilai Terkecil Siswa
-6. Cari Siswa
-7. Kembali
+3. Tampilkan Nilai Terbesar Siswa
+4. Tampilkan Nilai Terkecil Siswa
+5. Cari Siswa
+6. Kembali
 ```
 
 ---
@@ -82,20 +80,22 @@ python main.py
 
 ## Contoh Output
 
+### Daftar Nilai Siswa
+
 ```text
 --- Daftar Nilai Siswa ---
 1. Khoirul azam - Nilai: 92 - Grade: A
 2. M. Hafiz i - Nilai: 78 - Grade: B
 ```
 
-### Contoh Nilai Terbesar
+### Nilai Terbesar
 
 ```text
 --- Nilai Terbesar ---
 1. Khoirul azam - Nilai: 92 - Grade: A
 ```
 
-### Contoh Nilai Terkecil
+### Nilai Terkecil
 
 ```text
 --- Nilai Terkecil ---
