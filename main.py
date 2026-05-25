@@ -57,8 +57,10 @@ def tampilkan_sub_menu():
     print("1. Tampilkan Semua Data")
     print("2. Tampilkan Nama Siswa")
     print("3. Tampilkan Nilai Siswa")
-    print("4. Cari Siswa")
-    print("5. Kembali")
+    print("4. Tampilkan Nilai Terbesar Siswa ")
+    print("5. Tampilkan Nilai Terkecil Siswa")
+    print("6. Cari Siswa")
+    print("7. Kembali")
 
 def tambah_data():
     print("\n--- Tambah Data Siswa ---")
@@ -132,6 +134,33 @@ def tampilkan_nilai():
     for siswa in data_siswa:
         print(f"{siswa['id']}. NIlai: {siswa['nilai']} - grade: {siswa['grade']}")
 
+
+def nilai_terbesar():
+    if not data_siswa:
+        print("Tidak ada data.")
+        return
+
+    terbesar = data_siswa[0]
+    for siswa in data_siswa:
+        if siswa['nilai'] > terbesar['nilai']:
+            terbesar = siswa
+
+    print("\n--- Nilai Terbesar ---")
+    print(f"{terbesar['id']}. {terbesar['nama']} - Nilai: {terbesar['nilai']} - Grade: {terbesar['grade']}")
+
+def nilai_terkecil():
+    if not data_siswa:
+        print("Tidak ada data.")
+        return
+
+    terbesar = data_siswa[0]
+    for siswa in data_siswa:
+        if siswa['nilai'] < terbesar['nilai']:
+            terbesar = siswa
+
+    print("\n--- Nilai Terkecil ---")
+    print(f"{terbesar['id']}. {terbesar['nama']} - Nilai: {terbesar['nilai']} - Grade: {terbesar['grade']}")
+
 def hitung_rata_rata():
     if not data_siswa:
         print("Tidak ada data untuk dihitung.")
@@ -160,7 +189,7 @@ def cari_siswa():
 def secondary():
     while True:
         tampilkan_sub_menu()
-        pilihan = input("Pilih menu (1-5): ")
+        pilihan = input("Pilih menu (1-7): ")
         
         if pilihan == '1':
             tampilkan_semua()
@@ -172,9 +201,15 @@ def secondary():
             tampilkan_nilai()
             break
         elif pilihan == '4':
-            cari_siswa()
+            nilai_terbesar()
             break
         elif pilihan == '5':
+            nilai_terkecil()
+            break
+        elif pilihan == '6':
+            cari_siswa()
+            break
+        elif pilihan == '7':
             break
         else:
             print("Pilihan tidak valid!")
