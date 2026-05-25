@@ -49,7 +49,7 @@ def tampilkan_menu():
     print("1. Tambah Data")
     print("2. Hapus Data")
     print("3. Tampilkan Data")
-    print("4. Hitung Rata-rata Nilai")
+    print("4. Hitung Rata-rata Nilai Kelas")
     print("5. Keluar")
 
 def tampilkan_sub_menu():
