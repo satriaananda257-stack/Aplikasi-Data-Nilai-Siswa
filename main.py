@@ -65,7 +65,7 @@ def tambah_data():
     print("\n--- Tambah Data Siswa ---")
 
     nama = input("Nama siswa: ")
-    nilai = round(input("Nilai (0-100): "))
+    nilai = round(int(input("Nilai (0-100): ")))
 
     if nilai < 0 or nilai > 100:
         print("Nilai harus antara 0-100!")
@@ -91,7 +91,9 @@ def tambah_data():
         "grade": grade
     })
 
-    print("Data berhasil ditambahkan!")
+    print("\n--- Data Siswa berhasil ditambahkan!--- ")
+    print(f'{new_id}. Nama: {nama}  Nilai: {nilai}  Grade: {grade}')
+
 
 def hapus_data():
     print("\n--- Hapus Data Siswa ---")
@@ -100,10 +102,11 @@ def hapus_data():
 
     for siswa in data_siswa:
         if siswa["nama"].lower() == nama.lower():
-            data_siswa.remove(siswa)
-            print("Data berhasil dihapus!")
+            data_siswa.remove(siswa) 
+            print(f"Siswa bernama {siswa['nama']} berhasil dihapus!")
             return
-
+        
+   
     print("Siswa tidak ditemukan!")
 
 def tampilkan_semua():
